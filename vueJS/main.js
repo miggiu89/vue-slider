@@ -22,7 +22,12 @@ var app = new Vue({
 
         prev : function(){
 
-            
+            if(this.indexImg == 0){
+                this.indexImg = this.images.lenght -1;
+            }
+            else {
+                this.indexImg--;
+            }
         }
     }
 
