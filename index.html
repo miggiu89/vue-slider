@@ -10,6 +10,7 @@
     <title>Vue-slider</title>
 </head>
 <body>
+
     <div id="root" class="container">
         <div class="slider-wrapper">
 
@@ -23,24 +24,17 @@
             <div class="images">
                <img :src="images[indexImg]" alt="">
                
-                
             </div>
            
-
-            
-            
             <div class="next" @click="next">
                 <i class="fas fa-angle-right"></i>
             </div>
             
             <div class="nav">
                 
-                <i class="fas fa-circle" ></i>
+                <i class="fas fa-circle" v-for="(img, index) in images" v-bind:class="(index == circleActive) ?'active' : null"></i>
             </div>
-            
-            
-
-
+           
         </div>
         
     </div>
