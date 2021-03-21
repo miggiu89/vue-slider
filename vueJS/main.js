@@ -12,23 +12,19 @@ var app = new Vue({
 
         next : function(){
 
-            if(this.indexImg == this.images.length -1){
-                this.indexImg = 0;
-            }
-            else{
-                this.indexImg++;
-            }
+            (this.indexImg == this.images.length -1) ? this.indexImg = 0 : this.indexImg++;
+                
+           
         },
 
         prev : function(){
 
-            if(this.indexImg == 0){
-                this.indexImg = this.images.lenght -1;
-            }
-            else {
-                this.indexImg--;
-            }
-        }
+            (this.indexImg == 0) ? this.indexImg = this.images.length = -1 : this.indexImg--;
+        },
+
+        
+        
+        
     }
 
 })
